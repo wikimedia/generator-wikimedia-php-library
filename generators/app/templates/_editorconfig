@@ -1,0 +1,7 @@
+# http://editorconfig.org
+root = true
+
+[*]
+<% if ( style === 'MediaWiki' ) { %>indent_style = tab
+<% } else { %>indent_style = space
+indent_size = 4<% } %>
