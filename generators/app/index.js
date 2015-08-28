@@ -8,7 +8,7 @@ var yeoman = require( 'yeoman-generator' ),
 
 module.exports = yeoman.generators.Base.extend( {
 	prompting: function () {
-		var self = this, done = self.async(), prompts = [ {
+		var done = this.async(), prompts = [ {
 			name    : 'author_name',
 			message : 'What is your name?'
 		}, {
@@ -62,6 +62,7 @@ module.exports = yeoman.generators.Base.extend( {
 
 		[
 			'gitignore',
+			'gitattributes',
 			'travis.yml'
 		].forEach( function ( fileName ) {
 			this.fs.copy(
@@ -71,6 +72,8 @@ module.exports = yeoman.generators.Base.extend( {
 		}.bind( this ) );
 
 		[
+			'_.gitreview',
+			'_.editorconfig',
 			'_Doxyfile',
 			'_composer.json',
 			'_phpcs.xml',
@@ -85,13 +88,6 @@ module.exports = yeoman.generators.Base.extend( {
 		}.bind( this ) );
 
 		this.fs.copyTpl(
-			this.templatePath( '_gitreview' ),
-			this.destinationPath( '.gitreview' ),
-			this.props,
-			this.tplSettings
-		);
-
-		this.fs.copyTpl(
 			this.templatePath( '_Library.php' ),
 			this.destinationPath( 'src/' + this.props.name + '.php' ),
 			this.props,
@@ -101,13 +97,6 @@ module.exports = yeoman.generators.Base.extend( {
 		this.fs.copyTpl(
 			this.templatePath( '_LibraryTest.php' ),
 			this.destinationPath( 'tests/' + this.props.name + 'Test.php' ),
-			this.props,
-			this.tplSettings
-		);
-
-		this.fs.copyTpl(
-			this.templatePath( '_editorconfig' ),
-			this.destinationPath( '.editorconfig' ),
 			this.props,
 			this.tplSettings
 		);

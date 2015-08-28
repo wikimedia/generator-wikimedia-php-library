@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <ruleset>
-<% if ( style === 'MediaWiki' ) { %>	<rule ref="vendor/mediawiki/mediawiki-codesniffer/MediaWiki"/>
-<% } else { %>	<rule ref="PSR2"/><% } %>
+<% if ( style === 'MediaWiki' ) {
+	%>	<rule ref="vendor/mediawiki/mediawiki-codesniffer/MediaWiki"/><%
+} else {
+	%>	<rule ref="PSR2"/><% }
+%>
 	<file>.</file>
 	<arg name="encoding" value="UTF-8"/>
 	<arg name="extensions" value="php"/>
