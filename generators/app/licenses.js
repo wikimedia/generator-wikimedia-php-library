@@ -44,10 +44,5 @@ module.exports = {
 			generator.props,
 			generator.tplSettings
 		);
-
-		generator.fs.copy(
-			generator.templatePath( 'licenses/GPLv2/COPYING' ),
-			generator.destinationPath( 'COPYING' )
-		);
 	}
 };
