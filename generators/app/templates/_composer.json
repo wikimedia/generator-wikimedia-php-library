@@ -1,5 +1,5 @@
 {
-	"name": "mediawiki/<%= slug %>",
+	"name": "wikimedia/<%= slug %>",
 	"description": "<%= description %>",
 	"license": "<%= license %>",
 	"homepage": "https://www.mediawiki.org/wiki/<%= name[0].toUpperCase() + name.slice( 1 ).replace( ' ', '_' ) %>",
