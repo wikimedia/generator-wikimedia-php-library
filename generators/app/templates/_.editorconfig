@@ -2,6 +2,5 @@
 root = true
 
 [*]
-<% if ( style === 'MediaWiki' ) { %>indent_style = tab
-<% } else { %>indent_style = space
-indent_size = 4<% } %>
+indent_style = <%= ( style === 'MediaWiki' ? 'tab' : 'space' ) %>
+indent_size = <%= ( style === 'MediaWiki' ? 'tab' : '4' ) %>
