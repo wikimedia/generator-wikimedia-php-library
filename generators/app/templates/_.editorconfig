@@ -1,6 +1,0 @@
-# http://editorconfig.org
-root = true
-
-[*]
-indent_style = <%= ( style === 'MediaWiki' ? 'tab' : 'space' ) %>
-indent_size = <%= ( style === 'MediaWiki' ? 'tab' : '4' ) %>

@@ -1,2 +1,0 @@
-<%= name %>
-Copyright <%= new Date().getUTCFullYear() %> <%= author_name %> <<%= author_email %>>
